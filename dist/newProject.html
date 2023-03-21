@@ -20,9 +20,99 @@
                 </ul> 
             </nav>
         </div>
-        <a href="newProject.html" class="header__user">New Project</a>
+        <a href="newProject.html" class="header__user" id="close">New Project</a>
     </div>        
 </header>
         <script src="js/app.min.js"></script>
+        <form action="#" method="post" enctype="multipart/form-data">
+        <div class="database">
+            <h3>Select Database</h3>
+            <div>
+                <input type="radio" checked name="database" value="animals" tabindex="1">Animals
+            </div>
+            <div>
+                <input type="radio" name="database" value="plants" tabindex="1">Plants
+            </div>
+        </div>
+        <div class="title">
+            <h3>Title</h3>
+            <input type="text" name="title" tabindex="2" required>
+        </div>
+        <a href="#addAuthor" class="popup-link">Add Author</a>
+        <div class="area">
+            <h3>Area of the study</h3>
+            <div class="selection">
+                <h3>Selection</h3>
+                <div>
+                    <input type="checkbox" tabindex="3" name="traditional" value="yes">Traditional Selection
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="3" name="index-based" value="yes">Index-based Selection
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="3" name="BLUP" value="yes">Best Linear Unbiased Prediction (BLUP)
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="3" name="MAS" value="yes">Marker-Associated Selection (MAS)
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="3" name="genomic" value="yes">Genomic Selection
+                </div>
+            </div>  
+
+            <div class="genetics">
+                <h3>Genetics and molecular biology</h3>
+                <div>
+                    <input type="checkbox" tabindex="4" name="PCR" value="yes">PCR (including PCR-RFLP) Technique Data
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="4" name="sequencing-based" value="yes">Sequencing-based Data
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="4" name="PGAPD" value="yes">Population Genetic Analysis Polymorphism Data (other)
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="4" name="RNA" value="yes">Gene Expression Analysis (RNA)
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="4" name="protein" value="yes">Gene Expression Analysis (Protein)
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="4" name="southern" value="yes">Southern Blotting
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="4" name="northern" value="yes">Northern Blotting
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="4" name="western" value="yes">Western Blotting
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="4" name="eastern" value="yes">Eastern Blotting (Post-Translation Modifications)
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="4" name="DNA" value="yes">DNA-microarray Technique Data
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="4" name="protein-structure" value="yes">Protein Structure-based Data
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="4" name="microRNA" value="yes">MicroRNA Analysis
+                </div>
+            </div>
+
+            <div class="bioinformatics">
+                <h3>Bioinformatics</h3>
+                <div>
+                    <input type="checkbox" tabindex="5" name="sequence" value="yes">Sequence Analysis Data
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="5" name="structure" value="yes">Structure Analysis Data
+                </div>
+                <div>
+                    <input type="checkbox" tabindex="5" name="mathematical-models" value="yes">Mathematical Models in Biology
+                </div>
+            </div>
+        </div>
+        </form>
     </body>
 </html>

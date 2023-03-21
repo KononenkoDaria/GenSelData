@@ -79,18 +79,6 @@ div#login .popup__content h1 {
   width: 190px;
 }
 
-input#colorBlack {
-  border-color: #000000;
-}
-
-input#colorGreen {
-  border-color: #61D836;
-}
-
-input#colorBlue {
-  border-color: #00A2FF;
-}
-
 .popup__content h1 {
   font-size: 32px;
   border-left: none;
@@ -173,7 +161,7 @@ form div p {
   height: 32px;
   align-items: center;
   background: #FFFFFF;
-  border: 1px solid;
+  border: 1px solid #00A2FF;
   border-radius: 10px;
 }
 
@@ -246,12 +234,24 @@ body {
   margin: 0%;
 }
 
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+  color: #000;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 body.lock {
   overflow: hidden;
 }
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 li {
