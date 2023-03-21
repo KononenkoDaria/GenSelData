@@ -1,0 +1,59 @@
+.header {
+    display: grid;
+    position: relative;
+    
+    height: 96px;
+
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(45deg,#00A2FF,#61D836, #000) 1;
+
+    background: #FFFFFF;
+}
+
+.header img {
+    display: flex;
+    justify-self: start;
+}
+
+.header__user {
+    color: #000;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 120px;
+    margin-left: 120px;
+    gap: 30px;
+}
+.menu {
+    display: grid;
+    flex: 1 1 auto;
+    justify-content: end;
+}
+
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu__link1 {
+    color: #00A2FF;
+    padding: 30px;
+    
+}
+.menu__link2 {
+    color: #61D836;
+    padding: 30px;
+}
+
+
+
+

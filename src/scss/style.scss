@@ -1,0 +1,27 @@
+@import "fonts";
+@import "header";
+@import "popups";
+@import "registration";
+
+body {
+    font-family: "Heebo";
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #E8F2FF;
+    background-size: 100%;
+    
+    margin: 0%;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+} 
+
+li{
+    list-style-type: none;
+}
+
