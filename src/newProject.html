@@ -6,7 +6,7 @@
     <body>
         @@include('html/headerAuthorizated.html', {})
         <script src="js/app.min.js"></script>
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form id="newProject" class="createNewProject" action="#" method="post" enctype="multipart/form-data">
         <div class="database">
             <h3>Select Database</h3>
             <div>
@@ -20,7 +20,9 @@
             <h3>Title</h3>
             <input type="text" name="title" tabindex="2" required>
         </div>
-        <a href="#addAuthor" class="popup-link">Add Author</a>
+        <div class="addAuthor">
+            <a href="#addAuthor" class="popup-link">Add Author</a>
+        </div>
         <div class="area">
             <h3>Area of the study</h3>
             <div class="selection">
@@ -96,7 +98,9 @@
             </div>
         </div>
 
-        
+        <div class="nextButton">
+            <button>Next</button>
+        </div>
         </form>
     </body>
 </html>

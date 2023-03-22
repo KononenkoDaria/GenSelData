@@ -22,13 +22,16 @@ window.onload = function() {
 //country list=======================
 
 
-const countries = countryList.getNames();
-const select = document.getElementById("countriesList");
-countries.forEach(function(country) {
-    const option = document.createElement("option");
-    option.text = country;
-    option.value = country;
-    select.add(option);
+document.addEventListener("DOMContentLoaded", function() {
+    const countries = countryList.getNames();
+    const select = document.getElementById("countriesList");
+  
+    countries.forEach(function(country) {
+      const option = document.createElement("option");
+      option.text = country;
+      option.value = country;
+      select.add(option);
+    });
 });
 
 //end country list===================
