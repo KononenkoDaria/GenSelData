@@ -1,8 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
 import IMask from 'imask';
-//import { CountryList } from 'country-list-js';
+import countryList from "country-list";
 
-//const countryList = new CountryList();
 
 flsFunctions.isWebp();
 
@@ -22,15 +21,15 @@ window.onload = function() {
 
 //country list=======================
 
-/*const countrySelect = document.getElementById("countryList");
-const countries = countryList.getNames();
 
-countries.forEach((country) => {
-  const option = document.createElement("option");
-  option.text = country;
-  option.value = country;
-  countrySelect.add(option);
-});*/
+const countries = countryList.getNames();
+const select = document.getElementById("countriesList");
+countries.forEach(function(country) {
+    const option = document.createElement("option");
+    option.text = country;
+    option.value = country;
+    select.add(option);
+});
 
 //end country list===================
 

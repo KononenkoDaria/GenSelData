@@ -57,6 +57,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "country-list": "^2.3.0",
     "gulp-update": "^0.0.2"
   }
 }
