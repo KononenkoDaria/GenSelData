@@ -225,6 +225,60 @@ div#registration h1 {
   margin-left: 65%;
 }
 
+.createNewProject {
+  align-items: flex-start;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.createNewProject h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.title input {
+  width: 440px;
+  height: 30px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.addAuthor {
+  display: block;
+  position: absolute;
+  top: 149px;
+  right: 60px;
+}
+
+.area {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.area > h3 {
+  width: 100%;
+}
+
+.nextButton {
+  display: block;
+  position: absolute;
+  right: 60px;
+  bottom: 200px;
+}
+
+.nextButton button {
+  color: #61D836;
+  font-weight: 500;
+  font-size: 20px;
+  border: 1px solid #61D836;
+  background-color: #E8F2FF;
+  border-radius: 15px;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
 body {
   font-family: "Heebo";
   font-size: 16px;
