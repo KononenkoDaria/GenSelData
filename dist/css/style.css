@@ -265,7 +265,7 @@ div#registration h1 {
   display: block;
   position: absolute;
   right: 60px;
-  top: 755px;
+  bottom: 200px;
 }
 
 .nextButton button {

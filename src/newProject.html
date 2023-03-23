@@ -7,7 +7,8 @@
         @@include('html/headerAuthorizated.html', {})
         <script src="js/app.min.js"></script>
         <form id="newProject" class="createNewProject" action="#" method="post" enctype="multipart/form-data">
-        <div class="database">
+            <div class="step">
+            <div class="database">
             <h3>Select Database</h3>
             <div>
                 <input type="radio" checked name="database" value="animals" tabindex="1">Animals
@@ -99,7 +100,77 @@
         </div>
 
         <div class="nextButton">
-            <button>Next</button>
+            <button class="next">Next</button>
+        </div>
+        </div>
+
+        <div class="step">
+            <div class="category">
+                <h3>Animal category and species</h3>
+                <div class="stockbreeding">
+                    <h3>Stockbreeding</h3>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="bosGrunniens" value="yes">Bos grunniens
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="bosTaurus" value="yes">Bos taurus
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="bosIndicus" value="yes">Bos indicus
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="bosJavanicus" value="yes">Bos javanicus
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="bubalusBubalis" value="yes">Bubalus bubalis
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="capraHircus" value="yes">Capra hircus
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="camelusDromedarius" value="yes">Camelus dromedarius
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="camelusBactrianus" value="yes">Camelus bactrianus
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="caviaPorcellus" value="yes">Cavia porcellus
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="equusCaballus" value="yes">Equus caballus
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="equusAsinus" value="yes">Equus asinus
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="lamaGlama" value="yes">Lama glama
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="mustelaPutoriusFuro" value="yes">Mustela putorius furo
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="neovisonVison" value="yes">Neovison vison
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="odocoileusVirginianus" value="yes">Odocoileus virginianus
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="oryctolagusCuniculus" value="yes">Oryctolagus cuniculus
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="ovisAries" value="yes">Ovis aries
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="rangiferTarandus" value="yes">Rangifer tarandus
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="susScrofa" value="yes">Sus scrofa
+                    </div>
+                    <div>
+                        <input type="checkbox" tabindex="6" name="vicugnaPacos" value="yes">Vicugna pacos
+                    </div>
+                </div>
+            </div>
         </div>
         </form>
     </body>
