@@ -5,6 +5,6 @@ export const server = (done) => {
         },
         Proxy: "GenSelData",
         notify: false,
-        port: 8000,
+        port: 3000,
     });
 }

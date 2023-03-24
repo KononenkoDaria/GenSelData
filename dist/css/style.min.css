@@ -225,6 +225,14 @@ div#registration h1 {
   margin-left: 65%;
 }
 
+.step {
+  display: none;
+}
+
+.step:first-child {
+  display: block;
+}
+
 .createNewProject {
   align-items: flex-start;
   margin-left: 40px;
@@ -249,6 +257,29 @@ div#registration h1 {
   position: absolute;
   top: 149px;
   right: 60px;
+}
+
+.category {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.category > *:not(h3) {
+  margin-left: 55px;
+  margin-right: 60px;
+}
+
+.category > h3 {
+  width: 100%;
+}
+
+.category .other {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .area {

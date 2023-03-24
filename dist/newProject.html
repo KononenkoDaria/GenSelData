@@ -25,7 +25,7 @@
 </header>
         <script src="js/app.min.js"></script>
         <form id="newProject" class="createNewProject" action="#" method="post" enctype="multipart/form-data">
-            <div class="step">
+            <div class="step" data-step="1">
             <div class="database">
             <h3>Select Database</h3>
             <div>
@@ -118,11 +118,11 @@
         </div>
 
         <div class="nextButton">
-            <button class="next">Next</button>
+            <button class="next" data-target="2">Next</button>
         </div>
         </div>
 
-        <div class="step">
+        <div class="step" data-step="2">
             <div class="category">
                 <h3>Animal category and species</h3>
                 <div class="stockbreeding">
@@ -148,6 +148,8 @@
                     <div>
                         <input type="checkbox" tabindex="6" name="camelusDromedarius" value="yes">Camelus dromedarius
                     </div>
+                    <button id="showOther1">Show other</button>
+                    <div id="hide1">
                     <div>
                         <input type="checkbox" tabindex="6" name="camelusBactrianus" value="yes">Camelus bactrianus
                     </div>
@@ -188,6 +190,7 @@
                         <input type="checkbox" tabindex="6" name="vicugnaPacos" value="yes">Vicugna pacos
                     </div>
                 </div>
+                </div>
                 <div class="poultryBreeding">
                     <h3>Poultry breeding</h3>
                     <div>
@@ -211,6 +214,8 @@
                     <div>
                         <input type="checkbox" tabindex="7" name="coturnixJaponica" value="yes">Coturnix japonica
                     </div>
+                    <button id="showOther2">Show other</button>
+                    <div id="hide2">
                     <div>
                         <input type="checkbox" tabindex="7" name="cygnusOlor" value="yes">Cygnus olor
                     </div>
@@ -239,6 +244,7 @@
                         <input type="checkbox" tabindex="7" name="struthioCamelus" value="yes">Struthio camelus
                     </div>
                 </div>
+                </div>
                 <div class="piscicultureAndAquaculture">
                     <h3>Pisciculture and aquaculture</h3>
                     <div>
@@ -262,6 +268,8 @@
                     <div>
                         <input type="checkbox" tabindex="8" name="hypophthalmichthysMolitrix" value="yes">Hypophthalmichthys molitrix
                     </div>
+                    <button id="showOther3">Show other</button>
+                    <div id="hide3">
                     <div>
                         <input type="checkbox" tabindex="8" name="ictalurusFurcatus" value="yes">Ictalurus furcatus
                     </div>
@@ -332,6 +340,7 @@
                         <input type="checkbox" tabindex="8" name="sciaenopsOcellatus" value="yes">Sciaenops ocellatus
                     </div>
                 </div>
+                </div>
                 <div class="apiculture">
                     <h3>Apiculture</h3>
                     <div>
@@ -370,13 +379,13 @@
                 </div>
             </div>
             <div class="backButton">
-                <button class="back">Back</button>
+                <button class="back" data-target="1">Back</button>
             </div>
             <div class="nextButton">
-                <button class="next">Next</button>
+                <button class="next" data-target="3">Next</button>
             </div>
         </div>
-        <div class="step">
+        <div class="step" data-step="3">
             <div class="gene">
                 <h3>Gene</h3>                
                 <input type="text" name="gene" tabindex="9" required>                
@@ -409,13 +418,13 @@
                 <input class="files" type="file" tabindex="15">
             </div>
             <div class="backButton">
-                <button class="back">Back</button>
+                <button class="back" data-target="2">Back</button>
             </div>
             <div class="nextButton">
-                <button class="next">Next</button>
+                <button class="next" data-target="4">Next</button>
             </div>
         </div>
-        <div class="step">
+        <div class="step" data-step="4">
             <div class="source">
                 <h3>Provide type of the source where the data is published and the appropriate link</h3>
             </div>
@@ -453,6 +462,12 @@
                         <input type="text" id="notPublishedData" name="URL" disabled>
                     </div>
                 </div>
+            </div>
+            <div class="backButton">
+                <button class="back" data-target="3">Back</button>
+            </div>
+            <div class="submitButton">
+                <button type="submit">Submit</button>
             </div>
         </div>
         </form>

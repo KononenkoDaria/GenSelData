@@ -1,5 +1,3 @@
-<?php require_once('php/registration.php')?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,35 +8,6 @@
     <title>GenSelData</title>
 </head>
     <body>
-
-    <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "genseldata";
-
-// Создаем соединение с базой данных
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Проверяем соединение на ошибки
-if ($conn->connect_error) {
-    die("Ошибка соединения: " . $conn->connect_error);
-}
-echo "Соединение с базой данных установлено успешно";
-
-
-$query = "SELECT animal_category_id FROM animal_category"; //готовим запрос. будем выбирать все из //таблицы workers
-
-$result = $conn->query($query); // выполняем запрос query.
-//объект результата сохраняем в $result
-
-while ($row = $result->fetch_assoc()) {
-    echo $row["animal_category_id"];
-}
-$conn->close();
-
-?>
-    
         <header class = "header lock-padding">   
     <div class="container">
         <a href="main.html"><img src="../img/logo.svg" alt="Logo"></a>
@@ -104,7 +73,6 @@ $conn->close();
             <h1>Sign Up</h1>
             <a href="#login" class="popup-link">Already have an account? Log In</a>
             <form action="#" method="post" enctype="multipart/form-data">
-                
                 <div class="form">
                     <div class="column1">
 

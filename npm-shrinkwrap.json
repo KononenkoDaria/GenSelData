@@ -38,6 +38,7 @@
         "gulp-webpcss": "^1.1.1",
         "gulp-zip": "^5.1.0",
         "imask": "^6.4.3",
+        "jquery": "^3.6.4",
         "sass": "^1.59.3",
         "swiper": "^9.1.1",
         "ts-node": "^10.9.1",
@@ -10874,6 +10875,12 @@
       "funding": {
         "url": "https://github.com/chalk/supports-color?sponsor=1"
       }
+    },
+    "node_modules/jquery": {
+      "version": "3.6.4",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.6.4.tgz",
+      "integrity": "sha512-v28EW9DWDFpzcD9O5iyJXg3R3+q+mET5JhnjJzQUZMHOv67bpSIHq81GEYpPNZHG+XXHsfSme3nxp/hndKEcsQ==",
+      "dev": true
     },
     "node_modules/js-base64": {
       "version": "2.6.4",
@@ -26442,6 +26449,12 @@
           }
         }
       }
+    },
+    "jquery": {
+      "version": "3.6.4",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.6.4.tgz",
+      "integrity": "sha512-v28EW9DWDFpzcD9O5iyJXg3R3+q+mET5JhnjJzQUZMHOv67bpSIHq81GEYpPNZHG+XXHsfSme3nxp/hndKEcsQ==",
+      "dev": true
     },
     "js-base64": {
       "version": "2.6.4",
