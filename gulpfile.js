@@ -10,17 +10,6 @@ global.app = {
   plugins: plugins
 }
 
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-
-function scripts() {
-    return gulp.src('src/js/*.js')
-      .pipe(concat('scripts.js'))
-      .pipe(gulp.dest('dist/js'));
-}
-
-exports.scripts = scripts;
-
 import { copy } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";

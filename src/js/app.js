@@ -23,21 +23,3 @@ window.onload = function() {
       document.getElementById("close").style.display = "none";
     }
 };
-  
-
-//==========================
-(function() {
-    try {
-      var script = document.createElement('script');
-      if ('async') {
-        script.async = true;
-      }
-      script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=2.29.0'.replace("HOST", location.hostname);
-      if (document.body) {
-        document.body.appendChild(script);
-      }
-    } catch (e) {
-      console.error("Browsersync: could not append script tag", e);
-    }
-})()
-//===========================

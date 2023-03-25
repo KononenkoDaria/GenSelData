@@ -310,6 +310,24 @@ div#registration h1 {
   gap: 10px;
 }
 
+.backButton {
+  display: block;
+  position: absolute;
+  left: 60px;
+  bottom: 200px;
+}
+
+.backButton button {
+  color: #00A2FF;
+  font-weight: 500;
+  font-size: 20px;
+  border: 1px solid #00A2FF;
+  background-color: #E8F2FF;
+  border-radius: 15px;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
 body {
   font-family: "Heebo";
   font-size: 16px;
