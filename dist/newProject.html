@@ -23,7 +23,6 @@
         <a href="newProject.html" class="header__user" id="close">New Project</a>
     </div>        
 </header>
-        <script src="js/app.min.js"></script>
         <form id="newProject" class="createNewProject" action="#" method="post" enctype="multipart/form-data">
             <div class="step" data-step="1">
             <div class="database">
@@ -189,7 +188,7 @@
                         <input type="checkbox" tabindex="6" name="vicugnaPacos" value="yes">Vicugna pacos
                     </div>
                 </div>
-                <button id="showOther1">Show other</button>
+                <button id="showOther1" class="showOrHide">Show other</button>
                 </div>
                 <div class="poultryBreeding">
                     <h3>Poultry breeding</h3>
@@ -243,7 +242,7 @@
                         <input type="checkbox" tabindex="7" name="struthioCamelus" value="yes">Struthio camelus
                     </div>                    
                 </div>
-                <button id="showOther2">Show other</button>
+                <button id="showOther2" class="showOrHide">Show other</button>
                 </div>
                 <div class="piscicultureAndAquaculture">
                     <h3>Pisciculture and aquaculture</h3>
@@ -339,7 +338,7 @@
                         <input type="checkbox" tabindex="8" name="sciaenopsOcellatus" value="yes">Sciaenops ocellatus
                     </div>                    
                 </div>
-                <button id="showOther3">Show other</button>
+                <button id="showOther3" class="showOrHide">Show other</button>
                 </div>
                 <div class="apiculture">
                     <h3>Apiculture</h3>
@@ -375,7 +374,7 @@
                     </div>
                 </div>
                 <div class="other">
-                    <a href="#">Other animals</a>
+                    <a href="#otherAnimals" class="popup-link">Other animals</a>
                 </div>
             </div>
             <div class="backButton">
@@ -387,21 +386,25 @@
         </div>
         <div class="step" data-step="3">
             <div class="gene">
-                <h3>Gene</h3>                
-                <input type="text" name="gene" tabindex="9" required>                
+                <h3>Gene</h3>    
+                <div id="genes" class="geneInput">            
+                    <input type="text" name="gene" tabindex="9" required>   
+                </div>             
                 <p>
                     Please, provide standard Gene Name as it is listed in the NCBI Database, 
                     use Capital letters and digits only.
                 </p>
-                <button class="addGene">Add Gene</button>                      
-                <input type="checkbox" tabindex="10" name="None" value="no">None (there is none gene to report in the study)
+                <button class="addGene" id="addGene">Add Gene</button>                      
+                <input type="checkbox" id="noGene" tabindex="10" name="None" value="yes">None (there is none gene to report in the study)
             </div>
             <div class="keywords">
                 <h3>Keywords</h3>
-                <input type="text" name="keyword1" tabindex="11" required>                
-                <input type="text" name="keyword2" tabindex="12" required>                
-                <input type="text" name="keyword3" tabindex="13" required>     
-                <button class="addKeyword">Add Keyword</button>           
+                <div id="keywords">
+                    <input type="text" name="keyword1" tabindex="11" required>                
+                    <input type="text" name="keyword2" tabindex="12" required>                
+                    <input type="text" name="keyword3" tabindex="13" required>   
+                </div>  
+                <button class="addKeyword" id="addKeyword">Add Keyword</button>           
             </div>
             <div class="abstract">
                 <h3>Abstract</h3>
@@ -429,12 +432,12 @@
                 <h3>Provide type of the source where the data is published and the appropriate link</h3>
             </div>
             <div>
-                <input type="radio" name="link" value="scopusOrWoSDatabase" tabindex="16">Journal article (Scopus or WoS database) 
+                <input type="checkbox" name="link" value="scopusOrWoSDatabase" tabindex="16">Journal article (Scopus or WoS database) 
                 <label for="scopusOrWoSDatabase">DOI</label>
                 <input type="text" id="scopusOrWoSDatabase" name="DOI" disabled required>
             </div>
             <div>
-                <input type="radio" name="link" value="pubMed_Medline" tabindex="17">Journal article (PubMed/Medline)
+                <input type="checkbox" name="link" value="pubMed_Medline" tabindex="17">Journal article (PubMed/Medline)
                 <label for="pubMed_Medline">PMID</label>
                 <input type="text" id="pubMed_Medline" name="PMID" disabled required>
             </div>
@@ -454,12 +457,12 @@
                 <input type="text" id="regionalConference" name="DOI_URL" disabled required>
                 <div>
                     <div>
-                        <input type="checkbox" tabindex="21" name="inPrint" value="yes" disabled>In Print
+                        <input type="checkbox" tabindex="21" name="link" id="inPrint" value="inPrint" disabled>In Print
                     </div>
                     <div>
-                        <input type="checkbox" tabindex="22" name="notPublishedData" value="yes" disabled>Not Published Data
-                        <label for="notPublishedData">URL</label>
-                        <input type="text" id="notPublishedData" name="URL" disabled>
+                        <input type="checkbox" tabindex="22" name="link" id="notPublishedData" value="notPublishedData" disabled>Not Published Data
+                        <label for="notPublishedDataURL">URL</label>
+                        <input type="text" id="notPublishedDataURL" name="URL" disabled>
                     </div>
                 </div>
             </div>
@@ -470,6 +473,132 @@
                 <button type="submit">Submit</button>
             </div>
         </div>
+        <div id="addAuthor" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <h1>Author(s) of the Project</h1>
+            <div class="automaticFilling">
+                <input type="checkbox" id="automaticFilling">
+                <label for="automaticFilling">I am the author of the project</label>
+            </div>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="form">
+                    <div class="column1">
+
+                    
+                <div class="prefix">
+                    <p>Prefix*</p>
+                    <select name="user__prefix" tabindex="1" required>
+                        <option value="0">None</option>
+                        <option value="1">Mr</option>
+                        <option value="2">Mrs</option>
+                        <option value="3">Miss</option>
+                        <option value="4">Ms</option>
+                        <option value="5">Mx</option>
+                        <option value="6">Dr</option>
+                        <option value="7">Prof</option>
+                    </select>
+                </div>   
+
+                <div class="firstName">
+                    <p>First Name*</p>
+                    <input tabindex="2" name="user__firstName" placeholder="First Name" required type="text">
+                </div>
+
+                <div class="lastName">
+                    <p>Last Name*</p>
+                    <input tabindex="4" name="user__lastName" placeholder="Last Name" required type="text">
+                </div>
+
+                <div class="affiliation">
+                    <p>Affiliation* (Please, use the official name of the Institution)</p>
+                    <input tabindex="5" name="user__affiliation" placeholder="Affiliation" required type="text">
+                </div>
+            </div>
+
+                <div class="column2">
+                <div class="city">
+                    <p>City*</p>
+                    <input tabindex="6" name="user__city" placeholder="City" required type="text">
+                </div>
+
+                <div class="zipCode">
+                    <p>Zip Code</p>
+                    <input tabindex="7" name="user__zipCode" placeholder="Zip Code" data-mask="zipCode" type="text">
+                </div>
+
+                <div class="country">
+                    <p>Country*</p>
+                    <select name="user__country" id="countriesList" tabindex="8" required>
+                        <option value="">--Choose country--</option>
+                        
+                    </select>
+                </div>
+
+                <div class="email">
+                    <p>E-mail*</p>
+                    <input tabindex="9" name="user__email" placeholder="E-mail" required type="email">
+                </div>
+
+                <div class="orcidID">
+                    <p>Orcid ID*</p>
+                    <input tabindex="10" required data-mask="orcidid" name="user__orcidID" placeholder="xxxx-xxxx-xxxx-xxxx" type="text">
+                </div>
+            </div>
+
+
+                <div class="submitButton">
+                    <button type="submit">Add</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+        <div id="otherAnimals" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <form action="#" method="post" enctype="multipart/form-data" class="formAddNewAnimal">
+                <h3>Add new animal</h3>
+                <div class="newAnimal">
+                    <input type="text" tabindex="1" name="user__animal" required>
+                </div>
+                <div class="text">
+                    Please, provide a latin name of the species as it is listed 
+                    in the Taxonomy browser of the NCBI database. Use binomial nomenclature 
+                    (two words) and don’t include the subspecies names in this box
+                </div>
+            
+                <div class="chooseCategory">
+                    <div>
+                        <input type="radio" tabindex="2" name="chooseCategory" id="chooseStockbreeding">
+                        <label for="chooseStockbreeding">Stockbreeding</label>
+                    </div>
+                    <div>
+                        <input type="radio" tabindex="2" name="chooseCategory" id="choosePoultryBreeding">
+                        <label for="choosePoultryBreeding">Poultry breeding</label>
+                    </div>
+                    <div>
+                        <input type="radio" tabindex="2" name="chooseCategory" id="choosePiscicultureAndAquaculture">
+                        <label for="choosePiscicultureAndAquaculture">Pisciculture and aquaculture</label>
+                    </div>
+                    <div>
+                        <input type="radio" tabindex="2" name="chooseCategory" id="chooseApiculture">
+                        <label for="chooseApiculture">Apiculture</label>
+                    </div>
+                    <div>
+                        <input type="radio" tabindex="2" name="chooseCategory" id="choosePets">
+                        <label for="choosePets">Pets</label>
+                    </div>
+                </div> 
+                <div class="submitButton">
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
         </form>
+        <script src="js/app.min.js"></script>
     </body>
 </html>

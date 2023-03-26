@@ -35,7 +35,7 @@
 .category {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .category > *:not(h3){
@@ -103,4 +103,48 @@
     padding: 10px 20px;
     gap: 10px;
     
+}
+
+.showOrHide {
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: #000000BF;
+}
+
+.automaticFilling {
+    display: flex;
+    align-items: center;
+}
+
+.automaticFilling input {
+    height: 16px;
+    width: 16px;
+    margin: auto;
+    margin-right: 5px;
+}
+
+.formAddNewAnimal .newAnimal input {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.formAddNewAnimal .text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.formAddNewAnimal .chooseCategory {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    
+}
+
+.formAddNewAnimal .chooseCategory input {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    margin-left: 10px;
 }
