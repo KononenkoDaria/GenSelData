@@ -23,7 +23,7 @@
         <a href="newProject.html" class="header__user" id="close">New Project</a>
     </div>        
 </header>
-        <form id="newProject" class="createNewProject" action="php/saveNewProject.php" method="post" enctype="multipart/form-data">
+        <form id="newProject" class="createNewProject" action="#" method="post" enctype="multipart/form-data">
             <div class="step" data-step="1">
             <div class="database">
             <h3>Select Database</h3>
@@ -385,6 +385,7 @@
             </div>
         </div>
         <div class="step" data-step="3">
+            <div class="lastStep">
             <div class="gene">
                 <h3>Gene</h3>    
                 <div id="genes" class="geneInput">            
@@ -395,11 +396,13 @@
                     use Capital letters and digits only.
                 </p>
                 <button class="addGene" id="addGene">Add Gene</button>                      
-                <input type="checkbox" id="noGene" tabindex="10" name="None" value="yes">None (there is none gene to report in the study)
+                <div>
+                    <input type="checkbox" id="noGene" tabindex="10" name="None" value="yes">None (there is none gene to report in the study)
+                </div>
             </div>
             <div class="keywords">
                 <h3>Keywords</h3>
-                <div id="keywords">
+                <div id="keywords" class="keywordInput">
                     <input type="text" name="keyword1" tabindex="11" required>                
                     <input type="text" name="keyword2" tabindex="12" required>                
                     <input type="text" name="keyword3" tabindex="13" required>   
@@ -418,7 +421,8 @@
                     Upload up to … files that reflect the results of the study. 
                     Use ZIP or RAR archives if necessary.
                 </p>
-                <input class="files" type="file" tabindex="15">
+                <input class="files" type="file" tabindex="15" id="files">
+            </div>
             </div>
             <div class="backButton">
                 <button class="back" data-target="2">Back</button>
@@ -431,41 +435,49 @@
             <div class="source">
                 <h3>Provide type of the source where the data is published and the appropriate link</h3>
             </div>
+            <div class="chooseSource">
             <div>
                 <input type="checkbox" name="link" value="scopusOrWoSDatabase" tabindex="16">Journal article (Scopus or WoS database) 
-                <label for="scopusOrWoSDatabase">DOI</label>
-                <input type="text" id="scopusOrWoSDatabase" name="DOI" disabled required>
+                <div class="inputLink">
+                    <input type="text" id="scopusOrWoSDatabase" name="DOI" disabled required placeholder="DOI">
+                </div>
             </div>
             <div>
                 <input type="checkbox" name="link" value="pubMed_Medline" tabindex="17">Journal article (PubMed/Medline)
-                <label for="pubMed_Medline">PMID</label>
-                <input type="text" id="pubMed_Medline" name="PMID" disabled required>
+                <div class="inputLink">
+                    <input type="text" id="pubMed_Medline" name="PMID" disabled required placeholder="PMID">
+                </div>
             </div>
             <div>
                 <input type="radio" name="link" value="other" tabindex="18">Journal Article (other)
-                <label for="other">DOI/URL</label>
-                <input type="text" id="other" name="DOI_URL" disabled required>
-            </div>
-            <div>
-                <input type="radio" name="link" value="internationalConference" tabindex="19">International Conference
-                <label for="internationalConference">DOI/URL</label>
-                <input type="text" id="internationalConference" name="DOI_URL" disabled required>
+                <div class="inputLink">
+                    <input type="text" id="other" name="DOI_URL" disabled required placeholder="DOI/URL">
+                </div>
             </div>
             <div>
                 <input type="radio" name="link" value="regionalConference" tabindex="20">Regional Conference
-                <label for="regionalConference">DOI/URL</label>
-                <input type="text" id="regionalConference" name="DOI_URL" disabled required>
+                <div class="inputLink">
+                    <input type="text" id="regionalConference" name="DOI_URL" disabled required placeholder="DOI/URL">
+                </div>
                 <div>
                     <div>
                         <input type="checkbox" tabindex="21" name="link" id="inPrint" value="inPrint" disabled>In Print
                     </div>
                     <div>
                         <input type="checkbox" tabindex="22" name="link" id="notPublishedData" value="notPublishedData" disabled>Not Published Data
-                        <label for="notPublishedDataURL">URL</label>
-                        <input type="text" id="notPublishedDataURL" name="URL" disabled>
+                        <div class="inputLink2">
+                            <input type="text" id="notPublishedDataURL" name="URL" disabled placeholder="URL">
+                        </div>
                     </div>
                 </div>
+            </div>           
+            <div>
+                <input type="radio" name="link" value="internationalConference" tabindex="19">International Conference
+                <div class="inputLink">
+                    <input type="text" id="internationalConference" name="DOI_URL" disabled required placeholder="DOI/URL">
+                </div>
             </div>
+        </div>
             <div class="backButton">
                 <button class="back" data-target="3">Back</button>
             </div>
@@ -592,7 +604,7 @@
                     </div>
                 </div> 
                 <div class="submitButton">
-                    <button name="saveProject" type="submit">Add</button>
+                    <button type="submit">Add</button>
                 </div>
             </form>
         </div>

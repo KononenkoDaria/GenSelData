@@ -390,6 +390,113 @@ div#registration h1 {
   margin-left: 10px;
 }
 
+.lastStep {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 800px;
+  width: 100%;
+}
+
+.gene, .keywords {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.addKeyword, .addGene {
+  border: none;
+  background: none;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Heebo";
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.gene p, .dataAndResults p {
+  width: 500px;
+}
+
+.step[data-step="3"], .step[data-step="4"] {
+  margin-left: 120px;
+}
+
+.step[data-step="3"] input[type=text], .new-input, .inputLink input, .inputLink2 input {
+  width: 230px;
+  height: 20px;
+  background: #FFFFFF;
+  border: 1px solid #00A2FF;
+  margin-bottom: 5px;
+  color: #000000;
+  font-size: 16px;
+  font-family: "Heebo";
+}
+
+textarea {
+  background: #FFFFFF;
+  border: 1px solid #00A2FF;
+  margin-bottom: 5px;
+}
+
+.keywordInput button, .geneInput button {
+  align-self: center;
+  color: #000000;
+  font-weight: 600;
+  background-color: #E8F2FF;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.geneInput, .keywordInput {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 300px;
+  align-items: flex-start;
+}
+
+input[type=file]::-webkit-file-upload-button {
+  color: #000000;
+  font-size: 16px;
+  font-family: "Heebo";
+  border: 1px solid #000000;
+  border-radius: 15px;
+  background-color: #E8F2FF;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+.chooseSource {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 320px;
+  align-items: stretch;
+  margin-top: 10px;
+}
+
+.inputLink, .inputLink2 {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.inputLink input, .inputLink2 input {
+  width: 100%;
+}
+
+.inputLink, .inputLink ~ div {
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+.inputLink2 {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
 body {
   font-family: "Heebo";
   font-size: 16px;

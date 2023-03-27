@@ -112,7 +112,7 @@ function newProjectForm() {
           const newInput = document.createElement('input');
           newInput.classList.add('new-input');
           const deleteButton = document.createElement('button');
-          deleteButton.innerHTML = 'Delete';
+          deleteButton.innerHTML = 'X';
           deleteButton.addEventListener('click', function() {
             genes.removeChild(newInput);
             genes.removeChild(deleteButton);
@@ -123,18 +123,28 @@ function newProjectForm() {
 
         const addKeyword = document.getElementById('addKeyword');
         const keywords = document.getElementById('keywords');
+        var maxInputs = 7;
+        var inputCount = 0;
 
         addKeyword.addEventListener('click', function() {
-          const newInputkeywords = document.createElement('input');
-          newInputkeywords.classList.add('new-input');
-          const deleteButton = document.createElement('button');
-          deleteButton.innerHTML = 'Delete';
-          deleteButton.addEventListener('click', function() {
-            keywords.removeChild(newInputkeywords);
-            keywords.removeChild(deleteButton);
-          });
-          keywords.appendChild(newInputkeywords);
-          keywords.appendChild(deleteButton);
+          if (inputCount < maxInputs) {
+            inputCount++;
+            const newInputkeywords = document.createElement('input');
+            newInputkeywords.classList.add('new-input');
+            const deleteButton = document.createElement('button');
+            deleteButton.innerHTML = 'X';
+            deleteButton.addEventListener('click', function() {
+              keywords.removeChild(newInputkeywords);
+              keywords.removeChild(deleteButton);
+              inputCount--;
+              $(addKeyword).removeAttr("disabled");
+            });
+            keywords.appendChild(newInputkeywords);
+            keywords.appendChild(deleteButton);
+          }
+          if (inputCount == maxInputs) {
+            $(addKeyword).attr("disabled", "disabled");
+          }
         });
         
         const inputContainer = document.getElementById('genes');
