@@ -1,0 +1,43 @@
+<div id="otherAnimals" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <form action="#" method="post" enctype="multipart/form-data" class="formAddNewAnimal">
+                <h3>Add new animal</h3>
+                <div class="newAnimal">
+                    <input type="text" tabindex="1" name="user__animal" required>
+                </div>
+                <div class="text">
+                    Please, provide a latin name of the species as it is listed 
+                    in the Taxonomy browser of the NCBI database. Use binomial nomenclature 
+                    (two words) and don’t include the subspecies names in this box
+                </div>
+            
+                <div class="chooseCategory">
+                    <div>
+                        <input type="radio" tabindex="2" name="chooseCategory" id="chooseStockbreeding">
+                        <label for="chooseStockbreeding">Stockbreeding</label>
+                    </div>
+                    <div>
+                        <input type="radio" tabindex="2" name="chooseCategory" id="choosePoultryBreeding">
+                        <label for="choosePoultryBreeding">Poultry breeding</label>
+                    </div>
+                    <div>
+                        <input type="radio" tabindex="2" name="chooseCategory" id="choosePiscicultureAndAquaculture">
+                        <label for="choosePiscicultureAndAquaculture">Pisciculture and aquaculture</label>
+                    </div>
+                    <div>
+                        <input type="radio" tabindex="2" name="chooseCategory" id="chooseApiculture">
+                        <label for="chooseApiculture">Apiculture</label>
+                    </div>
+                    <div>
+                        <input type="radio" tabindex="2" name="chooseCategory" id="choosePets">
+                        <label for="choosePets">Pets</label>
+                    </div>
+                </div> 
+                <div class="submitButton">
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

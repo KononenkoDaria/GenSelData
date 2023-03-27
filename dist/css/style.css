@@ -225,6 +225,14 @@ div#registration h1 {
   margin-left: 65%;
 }
 
+.step {
+  display: none;
+}
+
+.step:first-child {
+  display: block;
+}
+
 .createNewProject {
   align-items: flex-start;
   margin-left: 40px;
@@ -249,6 +257,29 @@ div#registration h1 {
   position: absolute;
   top: 149px;
   right: 60px;
+}
+
+.category {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.category > *:not(h3) {
+  margin-left: 55px;
+  margin-right: 60px;
+}
+
+.category > h3 {
+  width: 100%;
+}
+
+.category .other {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .area {
@@ -277,6 +308,67 @@ div#registration h1 {
   border-radius: 15px;
   padding: 10px 20px;
   gap: 10px;
+}
+
+.backButton {
+  display: block;
+  position: absolute;
+  left: 60px;
+  bottom: 200px;
+}
+
+.backButton button {
+  color: #00A2FF;
+  font-weight: 500;
+  font-size: 20px;
+  border: 1px solid #00A2FF;
+  background-color: #E8F2FF;
+  border-radius: 15px;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+.showOrHide {
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7490196078);
+}
+
+.automaticFilling {
+  display: flex;
+  align-items: center;
+}
+
+.automaticFilling input {
+  height: 16px;
+  width: 16px;
+  margin: auto;
+  margin-right: 5px;
+}
+
+.formAddNewAnimal .newAnimal input {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.formAddNewAnimal .text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.formAddNewAnimal .chooseCategory {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.formAddNewAnimal .chooseCategory input {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  margin-left: 10px;
 }
 
 body {
