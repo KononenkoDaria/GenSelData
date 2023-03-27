@@ -317,6 +317,25 @@ div#registration h1 {
   bottom: 200px;
 }
 
+.createNewProject .submitButton button {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  border: 1px solid #61D836;
+  background-color: #61D836;
+  border-radius: 15px;
+  padding: 10px 20px;
+  gap: 10px;
+  margin: 0%;
+}
+
+.createNewProject .submitButton {
+  display: block;
+  position: absolute;
+  right: 60px;
+  bottom: 200px;
+}
+
 .backButton button {
   color: #00A2FF;
   font-weight: 500;

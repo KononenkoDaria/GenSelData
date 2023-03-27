@@ -160,46 +160,72 @@ function newProjectForm() {
 
         //step 4================
 
-        const scopusOrWoSDatabase = $('#scopusOrWoSDatabase');
-        const pubMed_Medline = $('#pubMed_Medline');
-        const other = $('#other');
-        const internationalConference = $('#internationalConference');
-        const regionalConference = $('#regionalConference');
-        const inPrint = $('#inPrint');
-        const notPublishedData = $('#notPublishedData');
-        const notPublishedDataURL = $('#notPublishedDataURL');
-
-
-
-        $('input[name="link"]').on('change',function() {
-          if (scopusOrWoSDatabase.prop('checked') || pubMed_Medline.prop('checked')) {
-            if (scopusOrWoSDatabase.prop('checked')) {
-              scopusOrWoSDatabase.prop('disabled', false);
-              pubMed_Medline.prop('disabled', true);
-            } else if (pubMed_Medline.prop('checked')) {
-              scopusOrWoSDatabase.prop('disabled', true);
-              pubMed_Medline.prop('disabled', false);
-            } else {
-              pubMed_Medline.prop('disabled', false);
-              scopusOrWoSDatabase.prop('disabled', false);
-            }
-            $('#regionalConference').prop('disabled', true);
-            $('#other').prop('disabled', true);
-            $('#internationalConference').prop('disabled', true);
+        $('input[type="radio"][name="link"]').change(function() {
+          if ($(this).val() === "regionalConference") {
+            $('#inPrint').prop('disabled', false);
+            $('#notPublishedData').prop('disabled', false);
+            $('#regionalConference').prop('disabled', false);
           } else {
-            $('input[name="link"]').not(this).prop('checked', false); // снимаем выбор с других checkbox
-            $('#scopusOrWoSDatabase').prop('disabled', true);
-            $('#pubMed_Medline').prop('disabled', true);
-            if ($(this).val() == 'other'){
-              $('#other').prop('disabled', false);
-            } else if ($(this).val() == 'internationalConference') {
-              $('#internationalConference').prop('disabled', false);
-            } else if ($(this).val() == 'regionalConference') {
-              $('#regionalConference').prop('disabled', false);
-              $('#inPrint').prop('disabled', false);
-              $('#notPublishedData').prop('disabled', false);
-            } else if ($(this).val() == 'notPublishedData'){
+            $('#inPrint').prop('checked', false).prop('disabled', true);
+            $('#notPublishedData').prop('checked', false).prop('disabled', true);
+            $('#notPublishedDataURL').prop('disabled', true);
+            $('#regionalConference').prop('disabled', true);
+          }
+
+          if ($(this).val() === "internationalConference") {
+            $('#internationalConference').prop('disabled', false);
+          } else {
+            $('#internationalConference').prop('disabled', true);
+          }
+
+          if ($(this).val() === "other") {
+            $('#other').prop('disabled', false);
+          } else {
+            $('#other').prop('disabled', true);
+          }
+      
+          $('input[type="checkbox"][value="scopusOrWoSDatabase"]').prop('checked', false);
+          $('input[type="checkbox"][value="pubMed_Medline"]').prop('checked', false);
+          $('#pubMed_Medline').prop('disabled', true);
+          $('#scopusOrWoSDatabase').prop('disabled', true);
+        });
+      
+        $('input[type="checkbox"][name="link"]').change(function() {
+          if ($(this).is(':checked')) {
+            if ($(this).val() === "scopusOrWoSDatabase") {
+              $('#scopusOrWoSDatabase').prop('disabled', false);
+              $('input[type="radio"][value="internationalConference"]').prop('checked', false);
+              $('input[type="radio"][value="regionalConference"]').prop('checked', false);
+              $('input[type="radio"][value="other"]').prop('checked', false);
+              $('#other').prop('disabled', true);
+              $('#internationalConference').prop('disabled', true);
+              $('#regionalConference').prop('disabled', true);
+              $('#notPublishedData').prop('checked', false).prop('disabled', true);
+              $('#notPublishedDataURL').prop('disabled', true);
+              $('#inPrint').prop('checked', false).prop('disabled', true);
+            } else if ($(this).val() === "pubMed_Medline") {
+              $('#pubMed_Medline').prop('disabled', false);
+              $('input[type="radio"][value="internationalConference"]').prop('checked', false);
+              $('input[type="radio"][value="regionalConference"]').prop('checked', false);
+              $('input[type="radio"][value="other"]').prop('checked', false);
+              $('#other').prop('disabled', true);
+              $('#internationalConference').prop('disabled', true);
+              $('#regionalConference').prop('disabled', true);
+              $('#notPublishedData').prop('checked', false).prop('disabled', true);
+              $('#notPublishedDataURL').prop('disabled', true);
+              $('#inPrint').prop('checked', false).prop('disabled', true);
+            } else if ($(this).val() === "notPublishedData") {
+              $('#notPublishedData').prop('checked', true);
               $('#notPublishedDataURL').prop('disabled', false);
+            }
+          } else {
+            if ($(this).val() === "scopusOrWoSDatabase") {
+              $('#scopusOrWoSDatabase').prop('disabled', true);
+            } else if ($(this).val() === "pubMed_Medline") {
+              $('#pubMed_Medline').prop('disabled', true);
+            } else if ($(this).val() === "notPublishedData") {
+              $('#notPublishedData').prop('checked', false);
+              $('#notPublishedDataURL').prop('disabled', true);
             }
           }
         });
