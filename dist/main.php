@@ -1,4 +1,4 @@
-<?php require_once('php/registration.php')?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,14 +27,9 @@ if ($conn->connect_error) {
 echo "Соединение с базой данных установлено успешно";
 
 
-$query = "SELECT animal_category_id FROM animal_category"; //готовим запрос. будем выбирать все из //таблицы workers
 
-$result = $conn->query($query); // выполняем запрос query.
-//объект результата сохраняем в $result
 
-while ($row = $result->fetch_assoc()) {
-    echo $row["animal_category_id"];
-}
+
 $conn->close();
 
 ?>
@@ -57,7 +52,7 @@ $conn->close();
     <div class="popup__body">
         <div class="popup__content">
             <h1>Log In</h1>
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="php/authorization.php" method="post" enctype="multipart/form-data">
                 <div class="email">
                     <p>E-mail*</p>
                     <input tabindex="1" required name="user__email" placeholder="E-mail" type="email">
@@ -103,8 +98,8 @@ $conn->close();
         <div class="popup__content">
             <h1>Sign Up</h1>
             <a href="#login" class="popup-link">Already have an account? Log In</a>
-            <form action="#" method="post" enctype="multipart/form-data">
-                
+            <form action="php/registration.php" method="post" enctype="multipart/form-data">
+            
                 <div class="form">
                     <div class="column1">
 
@@ -180,9 +175,10 @@ $conn->close();
                 </div>
 
                 <div class="submitButton">
-                    <button type="submit">Sign Up</button>
+                    <button type="submit" name="button">Sign Up</button>
                 </div>
             </div>
+            
             </form>
         </div>
     </div>
