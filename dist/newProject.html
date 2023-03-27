@@ -23,7 +23,7 @@
         <a href="newProject.html" class="header__user" id="close">New Project</a>
     </div>        
 </header>
-        <form id="newProject" class="createNewProject" action="#" method="post" enctype="multipart/form-data">
+        <form id="newProject" class="createNewProject" action="php/saveNewProject.php" method="post" enctype="multipart/form-data">
             <div class="step" data-step="1">
             <div class="database">
             <h3>Select Database</h3>
@@ -592,7 +592,7 @@
                     </div>
                 </div> 
                 <div class="submitButton">
-                    <button type="submit">Add</button>
+                    <button name="saveProject" type="submit">Add</button>
                 </div>
             </form>
         </div>
