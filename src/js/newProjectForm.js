@@ -170,7 +170,7 @@ function newProjectForm() {
 
         //step 4================
 
-        $('input[type="radio"][name="link"]').change(function() {
+        $('input[type="radio"]').change(function() {
           if ($(this).val() === "regionalConference") {
             $('#inPrint').prop('disabled', false);
             $('#notPublishedData').prop('disabled', false);
@@ -200,7 +200,7 @@ function newProjectForm() {
           $('#scopusOrWoSDatabase').prop('disabled', true);
         });
       
-        $('input[type="checkbox"][name="link"]').change(function() {
+        $('input[type="checkbox"]').change(function() {
           if ($(this).is(':checked')) {
             if ($(this).val() === "scopusOrWoSDatabase") {
               $('#scopusOrWoSDatabase').prop('disabled', false);
